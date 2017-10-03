@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');  
 
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
@@ -10,16 +10,12 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
   entry: {
-		app: './src/index.js'//,
-		//print: './src/print.js'
+		app: './src/index.js'
 	},
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-	devServer:{
-		contentBase: './dist'
-	},
   module: {
 		rules: [
 			{
@@ -48,6 +44,5 @@ module.exports = {
 				new HtmlWebpackPlugin({
 					title: 'Output Management'
 				})
-		
 	]
 };	
