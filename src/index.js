@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './scss/style.scss';
 import printMe from './print.js';
-
+import './react/app.jsx';
 
 function component() {
   var element = document.createElement('div');
